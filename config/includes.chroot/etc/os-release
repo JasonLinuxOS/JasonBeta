@@ -1,0 +1,9 @@
+PRETTY_NAME="Jason Linux"
+NAME="Jason"
+ID=debian
+ID_LIKE=debian
+RELEASE_TYPE=rolling
+VENDOR_NAME=root0emir
+VERSION="1000-7"
+VERSION_ID="1000-7"
+

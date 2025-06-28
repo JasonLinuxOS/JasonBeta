@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Disable Jason Auto Start
+Name[tr]=Jason Otomatik Başlatmayı Devre Dışı Bırak
+Name[fr]=Désactiver le démarrage automatique de Jason
+Name[de]=Jason Autostart deaktivieren
+Name[es]=Deshabilitar inicio automático de Jason
+Name[ru]=Отключить автозапуск Jason
+Name[zh_CN]=禁用 Jason 自动启动
+Name[ja]=Jasonの自動起動を無効にする
+Name[it]=Disabilita avvio automatico di Jason
+Name[pt]=Desabilitar inicialização automática do Jason
+Name[ar]=تعطيل التشغيل التلقائي لجيسون
+
+Comment=Disable Jason Tor service auto start on boot
+Comment[tr]=Jason Tor servisi otomatik başlatmayı kapat
+Comment[fr]=Désactiver le démarrage automatique du service Tor de Jason
+Comment[de]=Jason Tor-Dienst Autostart deaktivieren
+Comment[es]=Deshabilitar el inicio automático del servicio Tor de Jason
+Comment[ru]=Отключить автозапуск службы Tor Jason при загрузке
+Comment[zh_CN]=禁用 Jason Tor 服务开机自启动
+Comment[ja]=Jason Tor サービスの自動起動を無効化
+Comment[it]=Disabilita l’avvio automatico del servizio Tor di Jason
+Comment[pt]=Desabilitar a inicialização automática do serviço Tor do Jason
+Comment[ar]=تعطيل خدمة تور جيسون من التشغيل التلقائي عند التشغيل
+
+Exec=gnome-terminal -- bash -c "sudo systemctl disable jason-tor.service; echo 'Jason Tor auto-start disabled.'; read -p 'Press Enter to close...';"
+Icon=/usr/share/icons/jason/jasonautostartdisable.png
+Terminal=true
+Type=Application
+Categories=System;Internet;

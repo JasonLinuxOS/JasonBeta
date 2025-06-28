@@ -1,0 +1,10 @@
+[Unit]
+Description=Enable Securonis IP spoofing protection in /etc/host.conf
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/securonis-anti-ipspoof
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

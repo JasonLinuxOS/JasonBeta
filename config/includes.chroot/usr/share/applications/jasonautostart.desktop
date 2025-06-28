@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Enable Jason Auto Start
+Name[tr]=Jason Otomatik Başlatmayı Etkinleştir
+Name[fr]=Activer le démarrage automatique de Jason
+Name[de]=Jason Autostart aktivieren
+Name[es]=Habilitar inicio automático de Jason
+Name[ru]=Включить автозапуск Jason
+Name[zh_CN]=启用 Jason 自动启动
+Name[ja]=Jasonの自動起動を有効にする
+Name[it]=Abilita avvio automatico di Jason
+Name[pt]=Habilitar inicialização automática do Jason
+Name[ar]=تمكين التشغيل التلقائي لجيسون
+
+Comment=Enable Jason Tor service to start automatically at boot
+Comment[tr]=Jason Tor servisini sistem açılışında otomatik başlat
+Comment[fr]=Activer le service Tor de Jason au démarrage
+Comment[de]=Jason Tor-Dienst beim Systemstart aktivieren
+Comment[es]=Habilitar el servicio Tor de Jason al iniciar el sistema
+Comment[ru]=Включить автозапуск службы Tor Jason при загрузке
+Comment[zh_CN]=启用 Jason Tor 服务开机自启动
+Comment[ja]=Jason Tor サービスを起動時に自動開始に設定
+Comment[it]=Abilita il servizio Tor di Jason all’avvio del sistema
+Comment[pt]=Habilitar o serviço Tor do Jason para iniciar automaticamente na inicialização
+Comment[ar]=تمكين خدمة تور جيسون للبدء تلقائيًا عند التشغيل
+
+Exec=gnome-terminal -- bash -c "sudo systemctl enable jason-tor.service; echo 'Jason Tor auto-start enabled.'; read -p 'Press Enter to close...';"
+Icon=/usr/share/icons/jason/jasonautostart.png
+Terminal=true
+Type=Application
+Categories=System;Internet;

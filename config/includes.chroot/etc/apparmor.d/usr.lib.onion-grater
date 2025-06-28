@@ -1,0 +1,57 @@
+# Last Modified: Tue Sep  5 12:12:58 2023
+include <tunables/global>
+
+## Copyright (C) 2015 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+#### meta start
+#### project Whonix
+#### category tor-control and security
+#### description
+## onion-grater apparmor profile
+#### meta end
+## The attach_disconnected flag prevents a denied
+## message on /dev/null -> disconnected path.
+
+
+/usr/lib/onion-grater flags=(attach_disconnected) {
+  include <abstractions/base>
+  include <abstractions/nameservice>
+  include <abstractions/python>
+  include <local/usr.lib.onion-grater>
+
+  deny /etc/ssl/openssl.cnf r,
+  deny /usr/bin/python{2,3}.[0-7]* r,
+
+  /etc/gai.conf r,
+  /etc/host.conf r,
+  /etc/hosts r,
+  /etc/nsswitch.conf r,
+  /etc/onion-grater.d/ r,
+  /etc/onion-grater.d/* r,
+  /etc/resolv.conf r,
+  /etc/resolv.conf.anondist r,
+  /etc/resolv.conf.whonix r,
+  /proc/cmdline r,
+  /run/tor/control rw,
+  /run/tor/control.authcookie r,
+  /sys/devices/*/*/*/*/*/*/*/*/*/queue/hw_sector_size r,
+  /tmp/* rwk,
+  /usr/lib/ r,
+  /usr/lib/onion-grater r,
+  /usr/lib/python*/__pycache__/ rw,
+  /usr/lib/python*/__pycache__/** rw,
+  /usr/lib/python3/dist-packages/sdnotify/__pycache__/ rwk,
+  /usr/lib/python3/dist-packages/sdnotify/__pycache__/** rwk,
+  /var/tmp/* rwk,
+  /{,usr/}bin/dash rix,
+  /{,usr/}bin/ps rix,
+  @{PROC}/ r,
+  @{PROC}/[0-9]*/fd/ r,
+  @{PROC}/[0-9]*/mounts r,
+  @{PROC}/[0-9]*/net/tcp r,
+  @{PROC}/[0-9]*/net/tcp6 r,
+  @{PROC}/[0-9]*/net/udp r,
+  @{PROC}/[0-9]*/net/udp6 r,
+  @{PROC}/[0-9]*/status r,
+
+}

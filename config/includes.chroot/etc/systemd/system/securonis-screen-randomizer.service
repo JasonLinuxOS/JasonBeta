@@ -1,0 +1,13 @@
+[Unit]
+Description=Securonis - Screen Resolution Randomizer
+After=display-manager.service
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/securonis-screen-randomizer
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

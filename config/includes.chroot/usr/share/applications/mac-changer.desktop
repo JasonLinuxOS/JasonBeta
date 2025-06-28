@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=MACChanger 
+Comment=Change your MAC address with a menu interface
+Exec=gnome-terminal -- bash -c "sudo /usr/bin/mac-changer; exec bash"
+Icon=network-wired
+Terminal=false
+Type=Application
+Categories=Utility;Network;

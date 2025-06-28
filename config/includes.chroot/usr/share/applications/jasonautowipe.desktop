@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Enable Jason Autowipe
+Name[tr]=Jason Autowipe Servisini Etkinleştir
+Name[fr]=Activer le service Jason Autowipe
+Name[de]=Jason Autowipe Dienst aktivieren
+Name[es]=Habilitar el servicio Jason Autowipe
+Name[ru]=Включить службу Jason Autowipe
+Name[zh_CN]=启用 Jason Autowipe 服务
+Name[ja]=Jason Autowipe サービスを有効にする
+Name[it]=Abilita il servizio Jason Autowipe
+Name[pt]=Habilitar o serviço Jason Autowipe
+Name[ar]=تمكين خدمة Jason Autowipe
+
+Comment=Enable Jason Autowipe service to start automatically at boot
+Comment[tr]=Jason Autowipe servisini sistem açılışında otomatik başlat
+Comment[fr]=Activer le service Jason Autowipe au démarrage
+Comment[de]=Jason Autowipe Dienst beim Systemstart aktivieren
+Comment[es]=Habilitar el servicio Jason Autowipe para que se inicie al arrancar
+Comment[ru]=Включить автозапуск службы Jason Autowipe при загрузке
+Comment[zh_CN]=启用 Jason Autowipe 服务开机自启动
+Comment[ja]=Jason Autowipe サービスを起動時に自動開始に設定
+Comment[it]=Abilita il servizio Jason Autowipe all’avvio del sistema
+Comment[pt]=Habilitar o serviço Jason Autowipe para iniciar automaticamente na inicialização
+Comment[ar]=تمكين خدمة Jason Autowipe للبدء تلقائيًا عند التشغيل
+
+Exec=gnome-terminal -- bash -c "sudo systemctl enable jason-autowipe.service; echo 'Jason Autowipe enabled.'; read -p 'Press Enter to close...';"
+Icon=/usr/share/icons/jason/jasonautowipe.png
+Terminal=true
+Type=Application
+Categories=System;Internet;

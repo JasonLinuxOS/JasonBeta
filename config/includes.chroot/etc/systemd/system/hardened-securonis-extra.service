@@ -1,0 +1,12 @@
+[Unit]
+Description=Apply Securonis Hardening Settings Extra Once
+After=multi-user.target
+ConditionPathExists=!/var/lib/securonis-hardening-done
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hardened-securonis-extra
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

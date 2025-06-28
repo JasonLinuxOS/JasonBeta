@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Check Jason Status
+Name[tr]=Jason Durumunu Kontrol Et
+Name[fr]=Vérifier l'état de Jason
+Name[de]=Jason-Status prüfen
+Name[es]=Comprobar el estado de Jason
+Name[ru]=Проверить статус Jason
+Name[zh_CN]=检查 Jason 状态
+Name[ja]=Jason の状態を確認
+Name[it]=Controlla lo stato di Jason
+Name[pt]=Verificar o estado do Jason
+Name[ar]=تحقق من حالة Jason
+
+Comment=Check if Jason anonymity routing is currently active
+Comment[tr]=Jason anonimliğinin aktif olup olmadığını kontrol et
+Comment[fr]=Vérifiez si le routage anonyme de Jason est actif
+Comment[de]=Überprüfen, ob anonymes Routing von Jason aktiv ist
+Comment[es]=Comprueba si el enrutamiento anónimo de Jason está activo
+Comment[ru]=Проверьте, активна ли анонимная маршрутизация Jason
+Comment[zh_CN]=检查 Jason 匿名路由是否处于活动状态
+Comment[ja]=Jason の匿名ルーティングが有効か確認します
+Comment[it]=Controlla se il routing anonimo di Jason è attivo
+Comment[pt]=Verifique se o roteamento anônimo do Jason está ativo
+Comment[ar]=تحقق مما إذا كان توجيه Jason المجهول نشطًا
+
+Exec=gnome-terminal -- bash -c "sudo /usr/bin/jasonstatus; exec bash"
+Icon=/usr/share/icons/jason/jasonstatus.png
+Terminal=true
+Type=Application
+Categories=Internet;

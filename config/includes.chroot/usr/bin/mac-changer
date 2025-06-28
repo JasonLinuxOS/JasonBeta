@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# Check for sudo/root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run this script with sudo or as root."
+  exit 1
+fi
+
+clear
+echo "==============================="
+echo "        MACChanger Script"
+echo "==============================="
+echo ""
+echo "Available network interfaces:"
+ip link show | awk -F: '$0 !~ "lo|vir|^[^0-9]"{print $2}' | tr -d ' '
+echo ""
+read -rp "Enter the interface you want to use (e.g., eth0, wlan0): " interface
+echo ""
+
+# Validate interface
+if ! ip link show "$interface" > /dev/null 2>&1; then
+  echo "Error: No such network interface '$interface'."
+  exit 1
+fi
+
+# Menu loop
+while true; do
+  clear
+  echo "====== MACChanger Menu ======"
+  echo "Interface: $interface"
+  echo "1) Change to Random MAC"
+  echo "2) Set Manual MAC"
+  echo "3) Revert to Original MAC"
+  echo "4) Show Current MAC"
+  echo "5) Exit"
+  echo "=============================="
+  read -rp "Choose an option [1-5]: " choice
+
+  case "$choice" in
+    1)
+      echo "[*] Changing to a random MAC..."
+      ip link set "$interface" down
+      macchanger -r "$interface"
+      ip link set "$interface" up
+      read -n 1 -s -r -p "Press any key to continue..."
+      ;;
+    2)
+      read -rp "Enter the new MAC address (format: XX:XX:XX:XX:XX:XX): " newmac
+      echo "[*] Setting manual MAC address: $newmac"
+      ip link set "$interface" down
+      macchanger --mac="$newmac" "$interface"
+      ip link set "$interface" up
+      read -n 1 -s -r -p "Press any key to continue..."
+      ;;
+    3)
+      echo "[*] Reverting to original MAC address..."
+      ip link set "$interface" down
+      macchanger -p "$interface"
+      ip link set "$interface" up
+      read -n 1 -s -r -p "Press any key to continue..."
+      ;;
+    4)
+      echo "[*] Current MAC address:"
+      ip link show "$interface" | grep ether
+      read -n 1 -s -r -p "Press any key to continue..."
+      ;;
+    5)
+      echo "Exiting. Goodbye!"
+      break
+      ;;
+    *)
+      echo "Invalid choice! Please enter a number between 1 and 5."
+      sleep 1
+      ;;
+  esac
+done

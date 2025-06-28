@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Start Tor Routing
+Name[tr]=Tor Yönlendirmeyi Başlat
+Name[fr]=Démarrer le routage Tor
+Name[de]=Tor-Routing starten
+Name[es]=Iniciar enrutamiento Tor
+Name[ru]=Запустить маршрутизацию через Tor
+Name[zh_CN]=启动 Tor 路由
+Name[ja]=Tor ルーティングを開始
+Name[it]=Avvia il routing Tor
+Name[pt]=Iniciar Roteamento Tor
+Name[ar]=ابدأ توجيه Tor
+
+Comment=Route all traffic through Tor
+Comment[tr]=Tüm trafiği Tor ağı üzerinden yönlendir
+Comment[fr]=Router tout le trafic via le réseau Tor
+Comment[de]=Leite den gesamten Datenverkehr über Tor um
+Comment[es]=Redirigir todo el tráfico a través de Tor
+Comment[ru]=Маршрутизировать весь трафик через сеть Tor
+Comment[zh_CN]=将所有流量通过 Tor 路由
+Comment[ja]=すべてのトラフィックを Tor 経由でルーティング
+Comment[it]=Instrada tutto il traffico tramite Tor
+Comment[pt]=Redirecionar todo o tráfego pela rede Tor
+Comment[ar]=توجيه كل حركة المرور عبر شبكة Tor
+
+Exec=gnome-terminal -- bash -c "sudo /usr/bin/jason start; exec bash"
+Icon=/usr/share/icons/jason/jasonstart.png
+Terminal=true
+Type=Application
+Categories=Internet;

@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Change Tor Identity
+Name[tr]=Tor IP Adresini Değiştir
+Name[fr]=Changer l'identité Tor
+Name[de]=Tor-Identität wechseln
+Name[es]=Cambiar identidad de Tor
+Name[ru]=Сменить личность Tor
+Name[zh_CN]=更换 Tor 身份
+Name[ja]=Tor の IP を変更
+Name[it]=Cambia identità Tor
+Name[pt]=Mudar identidade Tor
+Name[ar]=تغيير هوية Tor
+
+Comment=Change your IP address by forcing a new Tor circuit
+Comment[tr]=Yeni bir Tor devresi başlatarak IP adresini değiştir
+Comment[fr]=Changer votre adresse IP en forçant un nouveau circuit Tor
+Comment[de]=IP-Adresse ändern durch Erzwingen eines neuen Tor-Kreises
+Comment[es]=Cambia tu dirección IP forzando un nuevo circuito de Tor
+Comment[ru]=Смените IP, запустив новый Tor-маршрут
+Comment[zh_CN]=通过强制新 Tor 路由更改你的 IP
+Comment[ja]=新しい Tor サーキットで IP アドレスを変更
+Comment[it]=Cambia il tuo IP forzando un nuovo circuito Tor
+Comment[pt]=Mude seu IP forçando um novo circuito Tor
+Comment[ar]=قم بتغيير عنوان IP الخاص بك بإنشاء مسار Tor جديد
+
+Exec=gnome-terminal -- bash -c "sudo /usr/bin/jason change; exec bash"
+Icon=/usr/share/icons/jason/jasonchange.png
+Terminal=true
+Type=Application
+Categories=Internet;

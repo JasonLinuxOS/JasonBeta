@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Restart Tor Routing
+Name[tr]=Tor Yönlendirmesini Yeniden Başlat
+Name[fr]=Redémarrer le routage Tor
+Name[de]=Tor-Routing neu starten
+Name[es]=Reiniciar enrutamiento Tor
+Name[ru]=Перезапустить маршрутизацию Tor
+Name[zh_CN]=重启 Tor 路由
+Name[ja]=Tor ルーティングを再起動
+Name[it]=Riavvia il routing Tor
+Name[pt]=Reiniciar Roteamento Tor
+Name[ar]=إعادة تشغيل توجيه Tor
+
+Comment=Restart Tor traffic redirection and firewall rules
+Comment[tr]=Tor yönlendirmesini ve güvenlik duvarı kurallarını yeniden başlat
+Comment[fr]=Redémarrer la redirection de trafic Tor et les règles du pare-feu
+Comment[de]=Tor-Weiterleitung und Firewallregeln neu starten
+Comment[es]=Reinicia el redireccionamiento Tor y las reglas del cortafuegos
+Comment[ru]=Перезапустить маршрутизацию Tor и правила фаервола
+Comment[zh_CN]=重启 Tor 流量转发和防火墙规则
+Comment[ja]=Tor 転送とファイアウォールルールを再起動
+Comment[it]=Riavvia il reindirizzamento Tor e le regole firewall
+Comment[pt]=Reinicie o redirecionamento Tor e as regras de firewall
+Comment[ar]=إعادة تشغيل توجيه Tor وقواعد الجدار الناري
+
+Exec=gnome-terminal -- bash -c "sudo /usr/bin/jason restart; exec bash"
+Icon=/usr/share/icons/jason/jasonrestart.png
+Terminal=true
+Type=Application
+Categories=Internet;

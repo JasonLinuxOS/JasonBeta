@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "======================"
+echo "  JASON STATUS CHECK  "
+echo "======================"
+
+echo
+echo "→ Tor Service Status:"
+systemctl status tor | grep -E "Active:|Loaded:"
+
+echo
+echo "→ Jason Tor Routing Service:"
+systemctl status jason-tor | grep -E "Active:|Loaded:"
+
+echo
+echo "→ Jason Autowipe Service:"
+systemctl status jason-autowipe 2>/dev/null | grep -E "Active:|Loaded:" || echo "Autowipe service not found."
+
+echo
+echo "✓ Status check complete."

@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Check IP Address
+Name[tr]=İp Adresini Kontrol Et
+Name[fr]=Vérifier l'adresse IP
+Name[de]=IP-Adresse überprüfen
+Name[es]=Verificar dirección IP
+Name[ru]=Проверить IP-адрес
+Name[zh_CN]=检查 IP 地址
+Name[ja]=IP アドレスを確認
+Name[it]=Controlla l'indirizzo IP
+Name[pt]=Verificar endereço IP
+Name[ar]=تحقق من عنوان IP
+
+Comment=Check IP address and Tor status
+Comment[tr]=IP adresini ve Tor durumunu kontrol et
+Comment[fr]=Vérifiez l'adresse IP et l'état de Tor
+Comment[de]=Überprüfen Sie die IP-Adresse und den Tor-Status
+Comment[es]=Comprueba la dirección IP y el estado de Tor
+Comment[ru]=Проверьте IP-адрес и статус Tor
+Comment[zh_CN]=检查 IP 地址和 Tor 状态
+Comment[ja]=IP アドレスと Tor の状態を確認
+Comment[it]=Controlla l'indirizzo IP e lo stato di Tor
+Comment[pt]=Verifique o endereço IP e o status do Tor
+Comment[ar]=تحقق من عنوان IP وحالة Tor
+
+Exec=gnome-terminal -- bash -c "sudo /usr/bin/jason ip; exec bash"
+Icon=/usr/share/icons/jason/jasonip.png
+Terminal=true
+Type=Application
+Categories=Internet;

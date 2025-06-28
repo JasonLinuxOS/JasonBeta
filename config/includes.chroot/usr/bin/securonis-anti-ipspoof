@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "order bind,hosts" > /etc/host.conf
+echo "nospoof on" >> /etc/host.conf

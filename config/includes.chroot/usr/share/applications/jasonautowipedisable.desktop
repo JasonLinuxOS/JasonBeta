@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Disable Jason Autowipe
+Name[tr]=Jason Autowipe Servisini Devre Dışı Bırak
+Name[fr]=Désactiver le service Jason Autowipe
+Name[de]=Jason Autowipe Dienst deaktivieren
+Name[es]=Deshabilitar el servicio Jason Autowipe
+Name[ru]=Отключить службу Jason Autowipe
+Name[zh_CN]=禁用 Jason Autowipe 服务
+Name[ja]=Jason Autowipe サービスを無効にする
+Name[it]=Disabilita il servizio Jason Autowipe
+Name[pt]=Desabilitar o serviço Jason Autowipe
+Name[ar]=تعطيل خدمة Jason Autowipe
+
+Comment=Disable Jason Autowipe service auto start on boot
+Comment[tr]=Jason Autowipe servisi otomatik başlatmayı kapat
+Comment[fr]=Désactiver le démarrage automatique du service Jason Autowipe
+Comment[de]=Jason Autowipe Dienst Autostart deaktivieren
+Comment[es]=Deshabilitar el inicio automático del servicio Jason Autowipe
+Comment[ru]=Отключить автозапуск службы Jason Autowipe при загрузке
+Comment[zh_CN]=禁用 Jason Autowipe 服务开机自启动
+Comment[ja]=Jason Autowipe サービスの自動起動を無効化
+Comment[it]=Disabilita l’avvio automatico del servizio Jason Autowipe
+Comment[pt]=Desabilitar a inicialização automática do serviço Jason Autowipe
+Comment[ar]=تعطيل خدمة Jason Autowipe من التشغيل التلقائي عند التشغيل
+
+Exec=gnome-terminal -- bash -c "sudo systemctl disable jason-autowipe.service; echo 'Jason Autowipe disabled.'; read -p 'Press Enter to close...';"
+Icon=/usr/share/icons/jason/jasonautowipedisable.png
+Terminal=true
+Type=Application
+Categories=System;Internet;

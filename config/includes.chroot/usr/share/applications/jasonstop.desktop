@@ -1,0 +1,32 @@
+[Desktop Entry]
+Version=1.0
+Name=Stop Tor Routing
+Name[tr]=Tor Yönlendirmeyi Durdur
+Name[fr]=Arrêter le routage Tor
+Name[de]=Tor-Routing stoppen
+Name[es]=Detener el enrutamiento Tor
+Name[ru]=Остановить маршрутизацию через Tor
+Name[zh_CN]=停止 Tor 路由
+Name[ja]=Tor ルーティングを停止
+Name[it]=Ferma il routing Tor
+Name[pt]=Parar o Roteamento Tor
+Name[ar]=إيقاف توجيه Tor
+
+Comment=Stop routing all traffic through Tor
+Comment[tr]=Tüm trafiğin Tor üzerinden yönlendirilmesini durdur
+Comment[fr]=Arrêter de router tout le trafic via Tor
+Comment[de]=Beende die Umleitung des gesamten Datenverkehrs über Tor
+Comment[es]=Detener el redireccionamiento del tráfico por Tor
+Comment[ru]=Остановить перенаправление всего трафика через Tor
+Comment[zh_CN]=停止通过 Tor 路由所有流量
+Comment[ja]=全てのトラフィックの Tor 経由ルーティングを停止
+Comment[it]=Interrompi l'instradamento del traffico tramite Tor
+Comment[pt]=Parar de redirecionar todo o tráfego pela rede Tor
+Comment[ar]=إيقاف توجيه كل حركة المرور عبر Tor
+
+Exec=gnome-terminal -- bash -c "sudo /usr/bin/jason stop; exec bash"
+Icon=/usr/share/icons/jason/jasonstop.png
+Terminal=true
+Type=Application
+Categories=Internet;
+
